@@ -32,5 +32,5 @@ app.route('/:url')
 
 // Open server
 app.listen(port, hostname, function () {
-	console.log("\033[0;92m" + "\n => rAPI works on http://" + hostname + ":" + port + '\033[0m');
+	console.log("\033[0;92m" + "\n => works on port " + port + '\033[0m');
 });
