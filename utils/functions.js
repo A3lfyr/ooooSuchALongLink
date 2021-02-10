@@ -4,11 +4,6 @@ var baseO = new BaseN({
         'O','о','О','Ο','ο','Օ','օ','੦','ଠ','௦','౦','೦','ഠ','൦','๐','၀','ჿ','ዐ','០','᧐','ᱛ','ᴑ'
     ]
 });
-/*var baseO = new BaseN({
-    base:[
-        'O','◯','о','О','Ο','ο','Օ','օ','߀','ߋ','০','੦','૦','ଠ','୦','௦','౦','೦','ഠ','൦','๐','໐','࿀','၀','ჿ','ዐ','០','᧐','ᱛ','ᴑ'
-    ]
-});*/
 
 /**
  * Encode an url to BaseO
@@ -33,7 +28,6 @@ exports.decodeLink = function (oooUrl) {
     oooUrl.split("o").forEach(function(item) {
         stringUrl += String.fromCharCode(baseO.decode(item));
     });
-    //stringUrl = stringUrl.slice(1,-1);
 
     return stringUrl.toString();
 }

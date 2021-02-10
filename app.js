@@ -1,12 +1,3 @@
-/*
- * rAPI
- * author: Arthur REITER
- * Website : https://reiter.tf
- * Documentation : https://github.com/arthur-reiter/rAPI
-*/
-
-
-
 // Server Settings
 const hostname = "";
 const port = "8282";

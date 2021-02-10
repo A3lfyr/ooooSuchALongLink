@@ -10,7 +10,6 @@ if (oooUrl) // There is an oooUrl encode
     showOooUrlLink.innerHTML = oooUrl;
     showOooUrlLink.href = oooUrl;
 }
-//console.log(makeOooUrl());
 
 function renew() {
     form.style = "display:block;"

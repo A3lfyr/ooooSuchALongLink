@@ -16,8 +16,13 @@ body {
 	text-align: center;
 }
 
+#showOooUrl {
+	display: none;
+}
+
 @media (max-width: 1024px) {
 	.card {
 		max-width: 90%;
 	}
 }
+
