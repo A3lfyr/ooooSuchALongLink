@@ -1,0 +1,45 @@
+/*
+ * rAPI
+ * author: Arthur REITER
+ * Website : https://reiter.tf
+ * Documentation : https://github.com/arthur-reiter/rAPI
+*/
+
+
+
+// Server Settings
+const hostname = "";
+const port = "8282";
+
+// REST API
+var express = require('express');
+var cors = require('cors')
+var app = express();
+app.use(cors())
+app.use(express.static('public'));
+
+// Functions
+const { encodeLink, decodeLink } = require('./utils/functions.js');
+
+// Basic API route
+app.route('/')
+    .get(function (req, res) {
+        res.sendFile('index.html');
+    });
+
+app.route('/encode/')
+    .get(function (req, res) {
+        let url = encodeLink(req.query.url);
+        res.redirect("/?urlencode="+url);
+        //res.json(url);
+    });
+
+app.route('/:url')
+    .get(function (req, res) {
+        res.redirect(decodeLink(req.params.url));
+    });
+
+// Open server
+app.listen(port, hostname, function () {
+	console.log("\033[0;92m" + "\n => rAPI works on http://" + hostname + ":" + port + '\033[0m');
+});
