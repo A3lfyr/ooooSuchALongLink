@@ -8,4 +8,4 @@ The principle is to create a new URL from the encoding of another URL in baseO (
 
 ## Why ?
 
-Why not ?
+Why not ? 😅
