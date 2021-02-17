@@ -38,5 +38,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && pm2 restart app.js
+          script: cd ${{ secrets.PROJECT_PATH }} && pm2 restart ooooSuchALongLink
 
