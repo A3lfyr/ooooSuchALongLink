@@ -1,20 +1,39 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="less.js" type="text/javascript"></script>
-    <link href="http://data.reiter.tf/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="An URL unShortener with links composed only of circular characters.">
+    <meta name="author" content="Arthur (A3lfyr) REITER">
+    <link rel="icon" href="http://data.reiter.tf/img/icon200.png">
 
     <title>OOOOOOO Such a long link !</title>
-</head>
 
-<body>
-    <div class="container d-flex justify-content-center" style="height: 100%;">
+    <!-- Bootstrap core CSS & Themes -->
+    <link href="http://data.reiter.tf/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://data.reiter.tf/css/cover.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <!-- Navbar -->
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">OOOOOOO Such a long link !</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" target="_blank" href="https://github.com/A3lfyr/ooooSuchALongLink/"><i class="bi bi-github" style="font-size: 1.1rem"></i> Source Code</a>
+            <a class="nav-link" target="_blank" href="https://www.paypal.com/paypalme/ArthurReiter?locale.x=fr_FR"><i class="bi bi-cup-straw" style="font-size: 1.1rem"></i> Buy me a tea</a>
+          </nav>
+        </div>
+      </header>
+
+    <!-- Main -->
+      <main role="main" class="inner cover">
         <div class="card">
             <div class="card-body">
                 <h1 class="card-title">OOOOOOO Such a long link !</h1>
@@ -32,7 +51,7 @@
                     </form>
                 </p>
 
-                <div class="card-text" id="showOooUrl">
+                <div class="card-text" id="showOooUrl" style="display: none;">
                     <div class="mb-3">
                         <a id="showOooUrl-link" target="_blank"></a>
                     </div>
@@ -42,9 +61,24 @@
                 </div>
             </div>
         </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>&copy; 2021 by <a target="_blank" href="https://github.com/A3lfyr">A3lfyr</a></p>
+        </div>
+      </footer>
     </div>
 
-    <script src="form.js"></script>
-</body>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="form.js"></script>
+  </body>
 </html>
