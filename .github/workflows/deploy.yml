@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && git pull && npm install && node app.js &
+          script: cd ${{ secrets.PROJECT_PATH }} && git pull && npm install && pm2 start app.js
 
