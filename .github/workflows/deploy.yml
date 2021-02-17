@@ -29,14 +29,14 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && npm install && pm2 -f start app.js
+          script: cd ${{ secrets.PROJECT_PATH }} && npm install
           
-      - name: Starting node app
+      - name: Restarting node app
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSHKEY }}
-          script: cd ${{ secrets.PROJECT_PATH }} && pm2 start app.js
+          script: cd ${{ secrets.PROJECT_PATH }} && pm2 restart app.js
 
