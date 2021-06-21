@@ -1,0 +1,170 @@
+:root {
+    --main-bg: #0F1C2D;
+    --main-text: #FFFFFF;
+    --main-text-alt: #ffffff96;
+    --secondary-bg: #FFFFFF;
+    --secondary-text: #343A40;
+    --primary: #F07D1B;
+    --primary-alt: #F5A663;
+}
+
+
+body {
+    padding: 0 5%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+html {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: Quicksand,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    text-align: center;
+    height: 100%;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: .5em;
+    color: var(--main-text-alt);
+}
+
+header {
+    padding-top: .5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.75rem;
+}
+
+nav a{
+    margin-left: 1em;
+    font-weight: 700;
+}
+
+article {
+    background-color: var(--secondary-bg);
+    color: var(--secondary-text);
+    border-radius: .25rem;
+    padding: 1.5em;
+    margin: auto;
+    width: 38em;
+}
+
+button {
+    display: inline-block;
+    font-family: Quicksand,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--main-text);
+    border-color: transparent;
+    border-radius: .25rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 1.4;
+    padding: .375rem .75rem;
+    transition: 0.3s;
+    margin-top: 2em;
+}
+
+button:hover {
+    background-color: var(--primary-alt);
+}
+
+button.dark {
+    color: var(--main-text);
+    background-color: var(--main-bg);
+    border-color: var(--main-bg);
+}
+
+button.dark:hover {
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+    border-color: var(--main-bg);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--primary-alt);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+article h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: -.375rem;
+    margin-bottom: 1em;
+}
+
+#showOooUrl-link {
+    word-break: break-all;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+form input {
+    margin: auto;
+    font-family: Quicksand,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    display: block;
+    width: 85%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+form input:focus-visible {
+    outline-offset: 0px;
+}
+
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+@media screen and (orientation: landscape) and (min-width: 1280px) {
+    body {
+        padding: 0 15%;
+    }
+}
+
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+@media screen and (orientation: landscape) and (max-width: 1280px) {
+    body {
+        padding: 0 10%;
+    }
+}

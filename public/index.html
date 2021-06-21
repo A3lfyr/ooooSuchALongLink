@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MGWRTKS');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="An URL unShortener with links composed only of circular characters.">
@@ -17,80 +9,46 @@
 
     <title>OOOO Such a long link !</title>
 
-    <!-- Bootstrap core CSS & Themes -->
-    <link href="http://data.reiter.tf/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://data.reiter.tf/css/cover.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="style.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   </head>
 
-  <body class="text-center">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGWRTKS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <h1>OOOO Such a long link !</h1>
+    <nav>
+      <a class="nav-link" target="_blank" href="https://github.com/A3lfyr/ooooSuchALongLink/"><i class="bi bi-github" style="font-size: 1.1rem"></i> Source Code</a>
+      <a class="nav-link" target="_blank" href="https://www.paypal.com/paypalme/ArthurReiter?locale.x=fr_FR"><i class="bi bi-cup-straw" style="font-size: 1.1rem"></i> Buy me a tea</a>
+    </nav>
+  </header>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-
-        <!-- Navbar -->
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">OOOO Such a long link !</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" target="_blank" href="https://github.com/A3lfyr/ooooSuchALongLink/"><i class="bi bi-github" style="font-size: 1.1rem"></i> Source Code</a>
-            <a class="nav-link" target="_blank" href="https://www.paypal.com/paypalme/ArthurReiter?locale.x=fr_FR"><i class="bi bi-cup-straw" style="font-size: 1.1rem"></i> Buy me a tea</a>
-          </nav>
+  <body>
+    <article>
+      <h1>OOOO Such a long link !</h1>
+      <h2 class="lead">An URL unShortener with links composed only of circular characters.</h2>
+      <form action="/encode" id="form">
+        <div>
+            <label for="url" >Url to unshorten</label>
+            <input type="url" id="url" name="url" placeholder="https://github.com/A3lfyr">
         </div>
-      </header>
-
-    <!-- Main -->
-      <main role="main" class="inner cover">
-        <div class="card">
-            <div class="card-body">
-                <h1 class="card-title">OOOO Such a long link !</h1>
-                <h6 class="card-subtitle mb-2 text-muted lead"> An URL unShortener with links composed only of circular
-                    characters.</h6>
-
-                <p class="card-text">
-                    <form action="/encode" id="form">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Url to unshorten</label>
-                            <input type="url" class="form-control" id="url" name="url"
-                                placeholder="https://github.com/A3lfyr">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Generate</button>
-                    </form>
-                </p>
-
-                <div class="card-text" id="showOooUrl" style="display: none;">
-                    <div class="mb-3">
-                        <a id="showOooUrl-link" target="_blank"></a>
-                    </div>
-                    
-                    <button onclick="copy()" class="btn btn-primary">Copy Url</button>
-                    <button onclick="renew()" class="btn btn-dark">Generate new url</button>
-                </div>
-            </div>
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>&copy; 2021 by <a target="_blank" href="https://github.com/A3lfyr">A3lfyr</a></p>
-        </div>
-      </footer>
-    </div>
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-
+        <br>
+        <button type="submit" class="btn btn-primary">Generate</button>
+      </form>
+      <div id="showOooUrl" style="display: none;">
+        <a id="showOooUrl-link" target="_blank"></a><br>
+        <button onclick="copy()">Copy Url</button>
+        <button onclick="renew()" class="dark">Generate new url</button>
+      </div>
+    </article>
+    
     <!-- Custom JavaScript -->
     <script src="form.js"></script>
   </body>
+
+  <footer>
+    &copy; 2021 by <a target="_blank" href="https://github.com/A3lfyr">A3lfyr</a>
+  </footer>
+
 </html>
