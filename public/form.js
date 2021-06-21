@@ -25,6 +25,10 @@ function copy() {
     elem.select();
     document.execCommand("copy");
     document.body.removeChild(elem);
+
+    var btncopy = document.getElementById("btn-copy");
+    btncopy.innerText = "✓ Copied !"
+    setTimeout(() => {btncopy.innerText = "Copy Url"}, 2000)
 }
 
 function makeOooUrl() {
