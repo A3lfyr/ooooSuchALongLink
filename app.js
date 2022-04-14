@@ -1,5 +1,5 @@
 // Server Settings
-const hostname = "";
+const hostname = "0.0.0.0";
 const port = "8282";
 
 // REST API
@@ -22,7 +22,6 @@ app.route('/encode/')
     .get(function (req, res) {
         let url = encodeLink(req.query.url);
         res.redirect("/?urlencode="+url);
-        //res.json(url);
     });
 
 app.route('/:url')
