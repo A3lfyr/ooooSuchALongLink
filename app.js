@@ -15,7 +15,7 @@ const { encodeLink, decodeLink } = require('./utils/functions.js');
 // Basic API route
 app.route('/')
     .get(function (req, res) {
-        res.sendFile('index.html');
+	res.sendFile('index.html', {root: __dirname + '/public'});
     });
 
 app.route('/encode/')
