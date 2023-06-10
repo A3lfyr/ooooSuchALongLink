@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "framework": null,
+    "outputDirectory": "public",
+    "builds": [
+        {
+          "src": "app.js",
+          "use": "@now/node"
+        }
+    ],
+    "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "app.js"
+        }
+      ]
+  }
